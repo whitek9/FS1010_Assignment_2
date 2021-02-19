@@ -42,7 +42,7 @@ ul, ol {
 ul li {
     cursor: pointer;
     position: relative;
-    background: #bbbbbb;
+    background: #dbdbdb;
     height: 2em;
     font-size: 1em;
     padding-left: 2em;
@@ -58,11 +58,13 @@ ul li::before {
     left: 0em;
     height: 2em;
     width: 2em;
+    transition: .5s;
 }
 
 ul li.checked {
     text-decoration: line-through;
-    color: #b8b8b8;
+    color: #757575;
+    transition: .5s;
 }
 
 ul li.checked::before {
@@ -75,28 +77,37 @@ ul li.checked::before {
     left: 0em;
     height: 2em;
     width: 2em;
+    transition: .5s;
 }
 
 ul li:nth-child(odd) {
-    background: #777777;
+    background: #a8a8a8;
 }
 
 ul li:hover {
     background: #ffffff;
+    transition: .3s;
 }
 
-.exitButton {
+.closeButton {
     position: absolute;
+    z-index: 1;
     right: 0;
     height: 2em;
     width: 2em;
     text-align: center;    
 }
 
-.exitButton:hover {
-    background-color: #ca2216;
+.closeButton:hover {
+    background-color: #cc1407;
     color: white;
+    transition: .4s;
   }
+
+.hidden {
+    display: none;
+    transition: 5s;
+}
 
 a {
     color: #428bca;

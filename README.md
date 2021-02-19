@@ -14,8 +14,8 @@
 ## Optional Extra's to Add:
 *These are only suggestions and things you can add to improve your application or make it more complex.*
 
-- [ ] Allow the removal of items completely from the list
-- [ ] Automatically move completed items to the bottom
+- [x] Allow the removal of items completely from the list
+- [x] Automatically move completed items to the bottom
 - [x] Error if input is empty
 
 ## Advanced Things to Try:

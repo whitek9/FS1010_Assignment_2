@@ -14,16 +14,9 @@ const createNewItem = () => {
     let newSpan = document.createElement('span')
     let exitSymbol = document.createTextNode('\u00D7')
 
-    newSpan.className = 'exitButton'
+    newSpan.className = 'closeButton'
     newSpan.appendChild(exitSymbol)
     newLI.appendChild(newSpan)
-
-    // for (i = 0; i < close.length; i++) {
-    //     close[i].onclick = function() {
-    //       var div = this.parentElement;
-    //       div.style.display = "none";
-    //     }
-    // }
 
     document.getElementById('listInput').value = ''
 }
@@ -39,6 +32,15 @@ $(document).ready( function() {
     
     $('ul').on('click', 'li', function() {
         $(this).toggleClass('checked')
-    })    
+        if ($(this).hasClass('checked')) {
+            $(this).parent('ul').append(this)
+        } else {
+            $(this).parent('ul').prepend(this)
+        }
+    })   
     
+    $('ul').on('click', 'span',function(e) {
+        $(this).parent('li').toggleClass('hidden')
+        return false
+    })
 })
