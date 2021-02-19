@@ -35,13 +35,68 @@ button, input, select, textarea {
 ul, ol {
     margin-top: 0;
     margin-bottom: 10px;
-    list-style-image: url(images/uncheckedbox.png);
+    padding: 0;
+    list-style: none;
 }
 
 ul li {
-    cursor: move;
+    cursor: pointer;
     position: relative;
+    background: #bbbbbb;
+    height: 2em;
+    font-size: 1em;
+    padding-left: 2em;
 }
+
+ul li::before {
+    content: '';
+    position: absolute;
+    background-image: url(images/uncheckedbox.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0em;
+    left: 0em;
+    height: 2em;
+    width: 2em;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #b8b8b8;
+}
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    background-image: url(images/checkedbox.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0em;
+    left: 0em;
+    height: 2em;
+    width: 2em;
+}
+
+ul li:nth-child(odd) {
+    background: #777777;
+}
+
+ul li:hover {
+    background: #ffffff;
+}
+
+.exitButton {
+    position: absolute;
+    right: 0;
+    height: 2em;
+    width: 2em;
+    text-align: center;    
+}
+
+.exitButton:hover {
+    background-color: #ca2216;
+    color: white;
+  }
 
 a {
     color: #428bca;

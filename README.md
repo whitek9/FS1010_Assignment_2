@@ -3,7 +3,7 @@
 ## Please include:
 - [x] Users type in the input field and press enter
 - [x] When they press enter, use the input value and add it as a list item to the unordered list under the input field.
-- [ ] When a user clicks on a list item, the checkbox should fill. And text should turn grey to indicate that it has been "done."
+- [x] When a user clicks on a list item, the checkbox should fill. And text should turn grey to indicate that it has been "done."
 
 ## Helpful Tips:
 - [x] Start with a "document ready"
