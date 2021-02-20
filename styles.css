@@ -40,43 +40,17 @@ ul, ol {
 }
 
 ul li {
-    cursor: pointer;
+    cursor: move;
     position: relative;
     background: #dbdbdb;
     height: 2em;
-    font-size: 1em;
     padding-left: 2em;
-}
-
-ul li::before {
-    content: '';
-    position: absolute;
-    background-image: url(images/uncheckedbox.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    top: 0em;
-    left: 0em;
-    height: 2em;
-    width: 2em;
-    transition: .5s;
+    font-size: 1em;
 }
 
 ul li.checked {
     text-decoration: line-through;
     color: #757575;
-    transition: .5s;
-}
-
-ul li.checked::before {
-    content: '';
-    position: absolute;
-    background-image: url(images/checkedbox.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    top: 0em;
-    left: 0em;
-    height: 2em;
-    width: 2em;
     transition: .5s;
 }
 
@@ -89,9 +63,58 @@ ul li:hover {
     transition: .3s;
 }
 
+.unCheckedBox {
+    background-image: url(images/uncheckedbox.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position:absolute;
+    left: 0;
+    height: 2em;
+    width: 2em;
+    padding: 0em .5em 0em .5em;
+    cursor: pointer;
+}
+
+.unCheckedBox:hover {
+    background-image: url(images/checkedbox.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position:absolute;
+    left: 0;
+    height: 2em;
+    width: 2em;
+    padding: 0em .5em 0em .5em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.checkedBox {
+    background-image: url(images/checkedbox.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position:absolute;
+    left: 0;
+    height: 2em;
+    width: 2em;
+    padding: 0em .5em 0em .5em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.checkedBox:hover {
+    background-image: url(images/uncheckedbox.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position:absolute;
+    left: 0;
+    height: 2em;
+    width: 2em;
+    padding: 0em .5em 0em .5em;
+    cursor: pointer;
+}
+
 .closeButton {
     position: absolute;
-    z-index: 1;
     right: 0;
     height: 2em;
     width: 2em;
@@ -99,9 +122,10 @@ ul li:hover {
 }
 
 .closeButton:hover {
-    background-color: #cc1407;
+    background-color: #000000;
     color: white;
     transition: .4s;
+    cursor: pointer;
   }
 
 .hidden {

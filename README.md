@@ -19,5 +19,5 @@
 - [x] Error if input is empty
 
 ## Advanced Things to Try:
-- [ ] Drag/drop sort items (have a look at jQuery UI)
+- [x] Drag/drop sort items (have a look at jQuery UI)
 - [x] When the page loads focus on the input field (i.e. cursor should load inside input, ready to type)
